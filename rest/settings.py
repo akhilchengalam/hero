@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'whitenoise'
 
 ]
 
@@ -140,6 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -166,3 +168,9 @@ REST_FRAMEWORK = {
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'frontend/dist')
+
+STATICFILES_DIRS = [
+    os.path.join(ANGULAR_APP_DIR),
+]
