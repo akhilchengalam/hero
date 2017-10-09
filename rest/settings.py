@@ -187,5 +187,6 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_REPLACE_HTTPS_REFERER = True
 
 CSRF_TRUSTED_ORIGINS = (
-    'change.allowed.com',
+    'restheroes.herokuapp.com',
+    'localhost',
 )
