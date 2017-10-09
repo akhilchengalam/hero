@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^$', serve,kwargs={'path': 'index.html'}),
     url(r'^(?!/?static/)(?!/?media/)(?P<path>.*\..*)$',
     RedirectView.as_view(url='/static/%(path)s', permanent=False)),
+    url(r'^.*', serve,kwargs={'path': 'index.html'}),
 ]
