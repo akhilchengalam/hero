@@ -914,7 +914,7 @@ var AccountsService = (function () {
         var _this = this;
         var user1;
         var data1;
-        var url = "http://localhost:8000/api/rest-auth/registration/";
+        var url = "https://restheroes.herokuapp.com/api/rest-auth/registration/";
         return this.http
             .post(url, JSON.stringify(data), { headers: this.headers })
             .toPromise()
@@ -944,7 +944,7 @@ var AccountsService = (function () {
         var _this = this;
         var user1;
         var data1;
-        var url = "http://localhost:8000/api/rest-auth/login/";
+        var url = "https://restheroes.herokuapp.com/api/rest-auth/login/";
         return this.http
             .post(url, JSON.stringify(data), { headers: this.headers })
             .toPromise()
@@ -973,7 +973,7 @@ var AccountsService = (function () {
     AccountsService.prototype.logout = function () {
         var _this = this;
         // remove user from local storage to log user out
-        var url = "http://localhost:8000/api/rest-auth/logout/";
+        var url = "https://restheroes.herokuapp.com/api/rest-auth/logout/";
         return this.http
             .post(url, { headers: this.headers })
             .toPromise()
@@ -1081,7 +1081,7 @@ var HeroService = (function () {
     function HeroService(http, accountsService) {
         this.http = http;
         this.accountsService = accountsService;
-        this.heroesUrl = 'http://localhost:8000/api'; // URL to web api
+        this.heroesUrl = 'https://restheroes.herokuapp.com/api'; // URL to web api
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */];
         var data1 = localStorage.getItem('currentUser');
         this.headers.append('Content-Type', 'application/json');
