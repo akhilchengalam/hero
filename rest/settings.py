@@ -153,7 +153,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
     ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
  }
+
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'dist')
