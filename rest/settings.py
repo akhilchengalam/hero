@@ -25,7 +25,7 @@ SECRET_KEY = '+k^%ykj7e*f0f)$j_3ws-30^clz@_*^spu!r=6$oio(syo7ij-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['restheroes.herokuapp.com','localhost']
 
 
 # Application definition
