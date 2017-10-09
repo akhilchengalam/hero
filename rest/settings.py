@@ -62,6 +62,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsPostCsrfMiddleware',
 ]
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
@@ -144,7 +146,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    'google.com',
+    'restheroes.herokuapp.com',
+    'localhost:8000',
+)
 
 REST_FRAMEWORK = {
    'DEFAULT_PERMISSION_CLASSES': (
@@ -175,3 +181,7 @@ ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'dist')
 STATICFILES_DIRS = [
     os.path.join(ANGULAR_APP_DIR),
 ]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_REPLACE_HTTPS_REFERER = True
