@@ -169,7 +169,7 @@ REST_FRAMEWORK = {
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'frontend/dist')
+ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'dist')
 
 STATICFILES_DIRS = [
     os.path.join(ANGULAR_APP_DIR),
