@@ -629,7 +629,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/hero/hero-search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"search-component\">\n  <h4>Hero Search</h4>\n  <input #searchBox id=\"search-box\" (keyup)=\"search(searchBox.value)\" />\n  <div>\n    <div *ngFor=\"let hero of heroes | async\"\n         (click)=\"gotoDetail(hero)\" class=\"search-result\" >\n      {{hero.name}}\n    </div>\n  </div>\n</div>"
+module.exports = "<div id=\"search-component\">\n  <h4>Hero Search</h4><br />\n  <input #searchBox id=\"search-box\" (keyup)=\"search(searchBox.value)\" />\n  <div>\n    <div *ngFor=\"let hero of heroes | async\"\n         (click)=\"gotoDetail(hero)\" class=\"search-result\" >\n      {{hero.name}}\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
