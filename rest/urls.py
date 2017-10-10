@@ -22,8 +22,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('heroes.urls')),
     url(r'^user/', include('user.urls')),
-    url(r'^$', serve,kwargs={'path': 'index.html'}),
+    # url(r'^$', serve,kwargs={'path': 'index.html'}),
     url(r'^(?!/?static/)(?!/?media/)(?P<path>.*\..*)$',
     RedirectView.as_view(url='/static/%(path)s', permanent=False)),
-    url(r'^.*', serve,kwargs={'path': 'index.html'}),
+    url(r'^.*/$', serve,kwargs={'path': 'index.html'}),
 ]

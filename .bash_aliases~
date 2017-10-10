@@ -1,0 +1,3 @@
+alias heroapp="source ~/akhil/rest/example/bin/activate && cd ~/rest/ && python manage.py runserver 8000"
+alias hero="cd ~/my-app/ && npm start"
+alias heroapp1="source ~/akhil/rest/example/bin/activate && cd ~/rest/ && python manage.py runserver 8000"
