@@ -9,7 +9,7 @@ django-rest-auth==0.9.1
 djangorestframework==3.6.4
 djangorestframework-jwt==1.11.0
 djangorestframework-oauth==1.1.0
-httpie==0.9.9
+httpie==1.0.3
 httpie-django-auth==0.1.1
 idna==2.6
 oauthlib==2.0.4
